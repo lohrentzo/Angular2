@@ -1,0 +1,10 @@
+<ul>
+    <li
+    *ngFor="#shoppingListItem of shoppingListItems"
+    (click) = "onItemClicked(shoppingListItem)"
+    > {{shoppingListItem.name}} </li>
+</ul>
+<input type="text" [(ngModel)]="selectedItem.name">
+<button (click)="onDeleteItem()">Delete Item</button>
+<input type="text" #shoppingListItem>
+<button (click)="onAddItem(shoppingListItem)">Add Item</button>
